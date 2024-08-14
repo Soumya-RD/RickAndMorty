@@ -1,9 +1,11 @@
 import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React from 'react'
+import { StatusBar } from 'expo-status-bar'
 
 const HomeScreen = ({ navigation }) => {
     return (
         <View style={styles.Container}>
+            <StatusBar backgroundColor='#fff' />
             <View>
                 {/* All Character */}
                 <View style={styles.allCharacterContainer}>
@@ -55,7 +57,7 @@ const styles = StyleSheet.create({
         width: 150,
         borderRadius: 25,
         backgroundColor: '#000',
-        borderColor:'#fff'
+        borderColor: '#fff'
     },
     allCharacterText: {
 
@@ -83,7 +85,7 @@ const styles = StyleSheet.create({
         width: 150,
         borderRadius: 25,
         backgroundColor: '#000',
-         borderColor:'#fff'
+        borderColor: '#fff'
     },
 
     deadCharacterContainer: {
@@ -93,7 +95,7 @@ const styles = StyleSheet.create({
         borderRadius: 25,
         marginLeft: 20,
         backgroundColor: '#000',
-         borderColor:'#fff'
+        borderColor: '#fff'
     },
     aliveCharacterText: {
 

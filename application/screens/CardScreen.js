@@ -97,37 +97,29 @@ const CardScreen = ({ navigation }) => {
                 </Picker>
             </View>
 
-            <View
-
-                style={{ flexDirection: 'row' }}
-            >
-                <View>
-                    <Image source={require('../assets/image2.jpg')} style={{ height: 100, width: 150, marginLeft: 15, borderRadius: 15, borderWidth: 1, borderColor: '#0aff99' }} />
-                    <Image source={require('../assets/image3.jpg')} style={{ height: 140, width: 100, marginLeft: 35, borderRadius: 25, borderWidth: 1, borderColor: '#fff', marginTop: 5 }} />
-                    <Image source={require('../assets/image1.jpg')} style={{ height: 100, width: 150, marginLeft: 15, borderRadius: 15, borderWidth: 1, borderColor: '#0aff99', marginTop: 5 }} />
-                </View>
-                <View>
-                    <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: 20, textAlign: 'center' }}>Search Result :</Text>
-                    <FlatList
 
 
-                        data={filterCharacters}
-                        keyExtractor={(item) => item.id.toString()}
-                        renderItem={({ item }) => (
+            <Text style={{ fontWeight: 'bold', color: '#fff', fontSize: 20, textAlign: 'center' }}>Search Result :</Text>
+            <FlatList
 
 
-                            <View style={{ marginTop: 1, width: 200, marginLeft: 30 }}>
-                                <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', { character: item })}>
-                                    <Text style={styles.nameText}>{item.name}</Text>
-                                </TouchableOpacity>
+                data={filterCharacters}
+                keyExtractor={(item) => item.id.toString()}
+                renderItem={({ item }) => (
 
-                            </View>
 
-                        )}
+                    <View style={{ marginTop: 1, width: 200, marginLeft: 100 }}>
+                        <TouchableOpacity onPress={() => navigation.navigate('DetailsScreen', { character: item })}>
+                            <Text style={styles.nameText}>{item.name}</Text>
+                        </TouchableOpacity>
 
-                    />
-                </View>
-            </View>
+                    </View>
+
+                )}
+
+            />
+
+
 
 
 
@@ -144,10 +136,7 @@ const styles = StyleSheet.create({
     Conatiner: {
         flex: 1,
         backgroundColor: '#0f4c5c',
-        borderWidth: 2,
-        borderColor: '#a1ff0a',
-        borderBottomLeftRadius: 150,
-        borderTopRightRadius: 100
+
     },
     inputContainer: {
         borderWidth: 1,

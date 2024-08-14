@@ -21,27 +21,32 @@ const styles = StyleSheet.create({
     flex: 1,
     padding: 20,
     alignItems: 'center',
-    backgroundColor: '#132a13'
+    backgroundColor: '#d8e2dc',
+
+    borderColor: '#283618',
+    borderRadius: 10,
+
+
   },
   image: {
     width: 200,
     height: 200,
     borderRadius: 100,
     marginBottom: 20,
-    borderColor: '#ff5400',
-    borderWidth: 1,
+    borderColor: '#252422',
+    borderWidth: 3,
     marginTop: 100
   },
   name: {
     fontSize: 24,
     fontWeight: 'bold',
     marginBottom: 10,
-    color: '#fff'
+    color: '#00171f'
   },
   details: {
     fontSize: 18,
     marginBottom: 5,
-    color: '#fff'
+    color: '#00171f'
   },
 });
 

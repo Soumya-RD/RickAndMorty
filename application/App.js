@@ -15,12 +15,65 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName='HomeScreen'>
-        <Stack.Screen name='HomeScreen' component={HomeScreen} />
-        <Stack.Screen name='CardScreen' component={CardScreen} />
-        <Stack.Screen name='DetailsScreen'
-          component={DetailsScreen} />
-        <Stack.Screen name='AliveCardScreen' component={AliveCardScreen} />
-        <Stack.Screen name='DeadCardScreen' component={DeadCardScreen} />
+        <Stack.Screen name='HomeScreen' component={HomeScreen}
+          options={{
+            title: 'Rick and Morky',
+            headerStyle: {
+              backgroundColor: '#003049',
+
+            },
+            headerTintColor: '#fff',
+            headerTitleAlign: 'center',
+
+          }}
+        />
+        <Stack.Screen name='CardScreen' component={CardScreen}
+          options={{
+            title: 'All Characters',
+            headerStyle: {
+              backgroundColor: '#0f4c5c',
+
+            },
+            headerTintColor: '#fff',
+            headerTitleAlign: 'center',
+
+          }}
+        />
+        <Stack.Screen name='DetailsScreen' component={DetailsScreen}
+
+          options={{
+            title: 'Characters Details',
+            headerStyle: {
+              backgroundColor: '#0f4c5c',
+
+            },
+            headerTintColor: '#fff',
+            headerTitleAlign: 'center',
+
+          }}
+        />
+        <Stack.Screen name='AliveCardScreen' component={AliveCardScreen}
+         options={{
+          title: 'Alive Characters',
+          headerStyle: {
+            backgroundColor:  '#132a13',
+
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+
+        }} />
+        <Stack.Screen name='DeadCardScreen' component={DeadCardScreen} 
+         options={{
+          title: 'Dead Characters',
+          headerStyle: {
+            backgroundColor:  '#132a13',
+
+          },
+          headerTintColor: '#fff',
+          headerTitleAlign: 'center',
+
+        }}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
